@@ -2,31 +2,84 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>今日の壁</title>
+<title>today</title>
 
 <style>
+
 body{
-  font-family: sans-serif;
-  max-width:600px;
-  margin:80px auto;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  max-width:650px;
+  margin:100px auto;
+  padding:0 20px;
   line-height:1.8;
   font-size:20px;
+  color:#222;
 }
 
 .date{
-  color:gray;
   font-size:14px;
+  color:#888;
+  margin-bottom:40px;
 }
+
+.title{
+  font-size:32px;
+  margin-bottom:30px;
+}
+
+.footer{
+  margin-top:80px;
+  font-size:13px;
+  color:#aaa;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="date">2026-03-15</div>
+<div class="date" id="date"></div>
 
-今日はGitHub Pagesを作りました。
-思ったより簡単でした。
+<div class="title">
+today
+</div>
+
+<div class="date">
+2026-03-16
+</div>
+  
+<p>
+
+今日はGitHub Pagesの日記サイトを作った。  
+思ったより簡単だった。
+
+</p>
+
+<p>
+
+・コーヒー飲んだ  
+・仕事ちょっとミス  
+・帰るのめんどい  
+
+</p>
+
+  
+<div class="footer">
+
+sontooooon.github.io
+
+</div>
+
+<script>
+
+const y = d.getFullYear()
+const m = String(d.getMonth()+1).padStart(2,'0')
+const day = String(d.getDate()).padStart(2,'0')
+
+document.getElementById("date").innerHTML = y+"-"+m+"-"+day
+
+</script>
 
 </body>
 </html>
